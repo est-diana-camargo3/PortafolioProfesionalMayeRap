@@ -1,0 +1,63 @@
+body
+{
+    display:grid; /*modelo grilla con filas y columnas*/ 
+    grid-template-columns: 1fr; 
+    /*repeat(cantidad, tamaño) cuando las filas son iguales*/
+    /*en este caso la unica columna ocupa toda la proporcion*/
+    grid-template-rows:70px 1fr 70px; /* header | main | footer */
+     /* sin repeat porque las filas no son iguales*/
+    /* en este caso se divide en 3 filas:
+    - la primera fija de 70 px=header.
+    - la segunda fila ocupará 1 fraccion del contenido.=main
+        si la pagina de alto mide 940 px; 140 se iran para el header y el footer 
+        y como hay solo hay una fila por fracciones (el main)
+        el main ocupara los 800 px restantes, si hubieran dos filas con fr, entonces uno ocuparia 400 (50%)
+        y la otra fila ocuparia el (50%) restante. (400px)
+        si el main crece pues esa fraccion crecera automaticamente  
+    - y la tercera fila que medira fijo 70 px = footer*/
+    background-color: rgb(255, 0, 0);
+    /*El body No tiene altura predeterminada, su altura depende del contenido, a menos de que lo configuremos*/
+    min-height: 100vh; 
+    /* vh significa Viewport Height (altura del área visible de la pantalla)*/
+    /* El elemento ocupará MINIMO todo el alto de la pantalla del dispositivo, aunque el contenido sea pequeño.*/
+    /* Si tenemos una malla de productos, la pagina (el main que fue el que quedo con proporciones (1fr) 
+    es el que crece...el header y el footer siguen midiendo 70 px cada uno */
+    /*ojo, porque a este 100 se le suman los margenes de los h1, de los p,por eso siempre deben reiniciarse
+    las margenes de h1, p...etc a margin: 0;*/
+    margin:0;    
+}
+header
+{
+    grid-column: 1/2;
+    grid-row:1/2;
+    background-color: rgb(255, 188, 210);
+}
+main
+{
+    grid-column: 1/2;
+    grid-row:2/3;
+    background-color:  rgb(247, 146, 99);
+}
+footer
+{
+    grid-column: 1/2;
+    grid-row:3/4;
+    background-color: rgb(127, 210, 127);
+}
+.contenedor {
+    display: flex;
+    height: 300px;
+    background-color: rgb(0, 0, 0);
+
+    /* AQUÍ actúa align-items */
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.caja {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(171, 126, 255);
+    margin: 10px;
+}
