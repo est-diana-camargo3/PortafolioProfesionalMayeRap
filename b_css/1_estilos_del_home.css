@@ -4,7 +4,7 @@ body
     grid-template-columns: 1fr; 
     /*repeat(cantidad, tamaño) cuando las filas son iguales*/
     /*en este caso la unica columna ocupa toda la proporcion*/
-    grid-template-rows:70px 1fr 70px; /* header | main | footer */
+    grid-template-rows:140px 0.9fr 100px; /* header | main | footer */
      /* sin repeat porque las filas no son iguales*/
     /* en este caso se divide en 3 filas:
     - la primera fija de 70 px=header.
@@ -15,7 +15,7 @@ body
         y la otra fila ocuparia el (50%) restante. (400px)
         si el main crece pues esa fraccion crecera automaticamente  
     - y la tercera fila que medira fijo 70 px = footer*/
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(255, 255, 255);
     /*El body No tiene altura predeterminada, su altura depende del contenido, a menos de que lo configuremos*/
     min-height: 100vh; 
     /* vh significa Viewport Height (altura del área visible de la pantalla)*/
@@ -24,8 +24,14 @@ body
     es el que crece...el header y el footer siguen midiendo 70 px cada uno */
     /*ojo, porque a este 100 se le suman los margenes de los h1, de los p,por eso siempre deben reiniciarse
     las margenes de h1, p...etc a margin: 0;*/
-    margin:0;    
+    margin:20px;
+    gap:20px; /*espacio entre filas y columnas, en este caso solo entre filas porque solo hay una columna*/ 
+
+    /* evitar barra de desplazamiento y fijar contenido al viewport */
+    overflow: hidden;
 }
+
+
 header
 {
     grid-column: 1/2;
