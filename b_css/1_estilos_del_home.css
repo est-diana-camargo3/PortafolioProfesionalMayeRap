@@ -170,10 +170,10 @@ body footer
 
     header #ContenedorIconoLogin
     {
-        /* hacer icono más pequeño en celular: 50% del alto del header */
-        height: 30%;
-        background-size: auto 43%;
-        margin-right: 2vh;
+        /* icono aún más pequeño para móvil (60% de tamaño previo) */
+        height: 20%;
+        background-size: auto 18%; /* 30% × 0.6 ≈ 18% */
+        margin-right: 0;
     }
 
     /* otros ajustes específicos para móvil… */
