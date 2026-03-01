@@ -157,14 +157,14 @@ body footer
 
     html
     {
-        height:92vh; /* asegurar que el html ocupe toda la altura del viewport */
+        height: 92px; /* asegurar que el html ocupe toda la altura del viewport */
         margin:0; /* eliminar márgenes por defecto */
     }
 
     body 
     {
         height: 92vh;          /* restar márgenes + gap */
-        /*overflow: hidden;      /* evitar scroll vertical */
+        overflow: hidden;      /* evitar scroll vertical */
     }
 
     /* otros ajustes específicos para móvil… */
