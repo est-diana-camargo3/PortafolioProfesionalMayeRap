@@ -59,6 +59,8 @@ body header
     background-color: rgb(129, 214, 133);
     display: grid;
     grid-template-columns: 0.6fr 1.4fr 0.6fr; /* el header se dividirá en tres columnas */
+    grid-template-rows: 1fr;  
+    gap:0px;
 }
 
 body header #ContenedorLogo 
@@ -86,7 +88,7 @@ body header #ContenedorIconoLogin
     cursor: pointer;
     background: url("../f_imagenes/IconoLogin.png") right center no-repeat;
     /*background-color: #fff;*/
-    background-size: auto 80%; /* escalar icono para que ocupe 70% del alto */
+    background-size: auto 50%; /* escalar icono para que ocupe 70% del alto */
     margin-right: 2vh;
     transition: filter 0.2s;
 }
