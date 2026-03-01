@@ -32,19 +32,31 @@ body
 }
 
 
-header
+body header
 {
-    grid-column: 1/2;
-    grid-row:1/2;
+    grid-column: 1/2; /*ocuapra la primera columna, que es la unica que hay*/
+    grid-row:1/2; /*ocupa la primera fila, que es la del header*/
     background-color: rgb(255, 188, 210);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* el header se dividirá en tres columnas */
 }
-main
+
+/* columnas internas del header */
+body header #contenedorlogo 
+{
+    grid-column: 2/3; /* ocupa la segunda columna del header, osea la central */
+    grid-row:1/2;/*ocupa la primera fila, que es la unica que hay*/
+    height: 100%; /* asegurar que cada celda ocupe 100% del alto del header */
+    background: url("../f_imagenes/Logo.png") center/contain no-repeat;
+}
+
+body main
 {
     grid-column: 1/2;
     grid-row:2/3;
     background-color:  rgb(162, 148, 240);
 }
-footer
+body footer
 {
     grid-column: 1/2;
     grid-row:3/4;
