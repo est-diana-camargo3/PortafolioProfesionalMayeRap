@@ -104,13 +104,10 @@ body header #ContenedorTitulo
     justify-content:center;  /* centrar horizontalmente */
     height: 90%;             /* ocupar 90% del alto del header */
     color: black;
-    font-size: 10vh;
+    font-size: 8vh;
     font-weight: bold;
     /*content: "LOGIN";*/
 }
-
-
-
 
 
 body header #ContenedorIconoLogin
@@ -157,68 +154,95 @@ body header #ContenedorIconoLogin:hover::after {
 
  **********************************************************************************/
 
-
-
-body main
-{
+body main {
     grid-column: 1/2;
     grid-row: 2/3;
     background-color: rgb(247, 205, 247);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 6vh;
+
+    display: flex;
+    justify-content: center; /* centrado horizontal */
+    align-items: center;     /* centrado vertical */
 }
 
-#col-left-eventos
+#carrito-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6vh;              /* espacio entre tarjeta / número / botón */
+    width: 100%;
+}
+
+.bloque 
 {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* centrar vertical */
-    align-items: center;     /* centrar horizontal */
-    gap: 6vh;
+    align-items: center;
+    gap: 3vh;              /* espacio interno */
 }
 
-#col-left-eventos .evento p
+.titulo-carrito 
 {
-    text-align: center;
     font-size: 4vh;
     font-weight: bold;
     color: #2850a7;
-    line-height: 1.4;
 }
 
-#col-right-eventos
-{
+.opciones-tarjeta {
     display: flex;
-    flex-direction: column;
-    justify-content: center; /* centrar vertical */
-    align-items: center;     /* centrar horizontal */
-    gap: 12vh;
+    flex-direction: row;
+    gap: 2vh;
+    font-size: 3vh;
+    color: #2850a7;
 }
 
-/* reutilizamos EXACTAMENTE el estilo del index */
+.opciones-tarjeta label {
+    cursor: pointer;
+}
+
+.input-numero {
+    width: 40vh;
+    padding: 1vh;
+    font-size: 2.5vh;
+    border: 4px solid #2850a7;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+/* ==============================
+   BOTÓN RAP – ESTILO OFICIAL
+   ============================== */
+
 .btn-rap {
     position: relative;
     padding: 0.8em 1.2em;
-    width: 55%;
+    width: 25%;
     border: 8px solid #2850a7;
     background-color: #97c490;
     color: #2850a7;
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
+
+    /* forma irregular rap */
     clip-path: polygon(
         5% 0%, 95% 0%, 100% 25%, 
         80% 40%, 100% 60%, 
         95% 100%, 5% 100%, 
         0% 60%, 20% 40%, 0% 25%
     );
-    transition: transform 0.15s;
+
+    transition: transform 0.15s ease, filter 0.15s ease;
 }
 
+/* hover */
 .btn-rap:hover {
     transform: scale(1.05);
     filter: brightness(1.4);
+}
+
+/* active (cuando se presiona) */
+.btn-rap:active {
+    transform: scale(0.98);
 }
 
 /**********************************************************************************
@@ -346,27 +370,6 @@ body footer #ContenedorIconoInstagram:hover::after {
     body header #ContenedorTitulo
     {
         font-size: 7vh;
-    }
-    body main
-    {
-        grid-template-columns: 1fr;
-        padding: 4vh;
-    }
-
-    #col-left-eventos,
-    #col-right-eventos
-    {
-        gap: 5vh;
-    }
-
-    #col-left-eventos .evento p
-    {
-        font-size: 3vh;
-    }
-
-    .btn-rap
-    {
-        width: 80%;
     }
 }
 

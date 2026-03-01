@@ -1,18 +1,10 @@
-// ===============================
-// FUNCIÓN GLOBAL (VISIBLE PARA HTML)
-// ===============================
-function irACarrito(evento) {
-    window.location.href = "../a_html/7_index_de_carrito.html?evento=" + evento;
-}
+// redirige al home cuando se hace clic en el logo
 
-// ===============================
-// EVENTOS DEL DOM
-// ===============================
 document.addEventListener('DOMContentLoaded', () => {
-
     const logo = document.getElementById('ContenedorLogo');
     if (logo) {
         logo.addEventListener('click', () => {
+            // la ruta puede ajustarse según la ubicación real
             window.location.href = '../index.html';
         });
     }
@@ -20,13 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginIcon = document.getElementById('ContenedorIconoLogin');
     if (loginIcon) {
         loginIcon.addEventListener('click', () => {
-            window.location.href = '../a_html/2_index_del_login.html';
+            // cambiar la ruta según el nombre real de la página
+			window.location.href = '../a_html/2_index_del_login.html';
         });
     }
 
     const whatsappIcon = document.getElementById('ContenedorIconoWhatsapp');
     if (whatsappIcon) {
         whatsappIcon.addEventListener('click', () => {
+            // ir a la página de whatsapp simulada
             window.location.href = '../a_html/3_index_del_whatsapp.html';
         });
     }
@@ -34,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const instaIcon = document.getElementById('ContenedorIconoInstagram');
     if (instaIcon) {
         instaIcon.addEventListener('click', () => {
+            // abrir Instagram externo
             window.location.href = 'https://www.instagram.com/maye_rap_2026/';
         });
     }

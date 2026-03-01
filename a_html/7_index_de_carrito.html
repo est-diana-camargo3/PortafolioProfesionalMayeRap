@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="stylesheet" href="../b_css/7_estilos_de_carrito.css"> </link>
+        <!--cuando queramos forzar la recarga osea ignorar la cache del navegador, 
+        le agregamos ?v=2 o cualquier numero al final del nombre del archivo css-->
+        <meta charset="UTF-8"></meta>
+        <meta name ="viewport" content="width=device-width,initial-scale=1.0">
+        <title> Home/Carrito </title>
+        <script src="../c_javascript/7_scripts_de_carrito.js"defer></script>
+    </head>
+    <body>
+        <header>
+            <div id="ContenedorLogo"> </div>
+            <div id="ContenedorTitulo">CARRITO</div>
+            <div id="ContenedorIconoLogin"> </div>
+        </header>
+
+        <main>
+            <div id="carrito-container">
+
+                <!-- SECCIÓN TARJETA -->
+                <div class="bloque">
+                    <h2 class="titulo-carrito">Tarjeta</h2>
+
+                    <div class="opciones-tarjeta">
+                        <label>
+                            <input type="radio" name="tarjeta" value="visa">
+                            Visa
+                        </label>
+
+                        <label>
+                            <input type="radio" name="tarjeta" value="mastercard">
+                            Mastercard
+                        </label>
+
+                        <label>
+                            <input type="radio" name="tarjeta" value="nequi">
+                            Nequi
+                        </label>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN NÚMERO -->
+                <div class="bloque">
+                    <h2 class="titulo-carrito">Número</h2>
+                    <input 
+                        type="text" 
+                        class="input-numero" 
+                        placeholder="Número de tarjeta o celular"
+                    >
+                </div>
+
+                <!-- BOTÓN COMPRAR -->
+                <button class="btn-rap">Comprar</button>
+
+            </div>
+        </main>
+        
+        <footer>
+              <div id="ContenedorIconoWhatsapp"> </div>
+              <div id="ContenedorIconoInstagram"> </div>
+        </footer>
+    </body>
+</html>
