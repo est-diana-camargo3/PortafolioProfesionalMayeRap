@@ -1,25 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <link rel="stylesheet" href="../b_css/2_estilos_del_login.css"> </link>
-        <!--cuando queramos forzar la recarga osea ignorar la cache del navegador, 
-        le agregamos ?v=2 o cualquier numero al final del nombre del archivo css-->
-        <meta charset="UTF-8"></meta>
-        <meta name ="viewport" content="width=device-width,initial-scale=1.0">
-        <title> Home/Login </title>
-        <script src="../c_javascript/2_scripts_del_login.js"defer></script>
-    </head>
-    <body>
-        <header>
-            <div id="ContenedorLogo"> </div>
-            <div id="ContenedorTitulo">LOGIN</div>
-        </header>
-        <main>
-                <h1>este es el login 11:41 am </h1>
-        </main>
-        <footer>
-              <div id="ContenedorIconoWhatsapp"> </div>
-              <div id="ContenedorIconoInstagram"> </div>
-        </footer>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home / Login</title>
+
+    <link rel="stylesheet" href="../b_css/2_estilos_del_login.css">
+    <script src="../c_javascript/2_scripts_del_login.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <div id="ContenedorLogo"></div>
+    <div id="ContenedorTitulo">LOGIN</div>
+</header>
+
+<main>
+
+    <div class="login-contenedor">
+
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" placeholder="Escribe tu usuario">
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" placeholder="••••••••">
+
+        <!-- BOTÓN RAP -->
+        <button id="btnLogin" class="btn-rap">
+            Iniciar sesión
+        </button>
+
+    </div>
+
+    <!-- MODAL BIENVENIDA -->
+    <div id="modalBienvenida" class="modal">
+        <div class="modal-contenido">
+            <p id="textoBienvenida"></p>
+
+            <!-- BOTÓN RAP -->
+            <button id="btnAceptar" class="btn-rap">
+                Aceptar
+            </button>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <div id="ContenedorIconoWhatsapp"></div>
+    <div id="ContenedorIconoInstagram"></div>
+</footer>
+
+</body>
 </html>
