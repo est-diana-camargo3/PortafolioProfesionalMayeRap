@@ -1,3 +1,12 @@
+html
+{
+    height:100vh; /* asegurar que el html ocupe toda la altura del viewport */
+    margin:0; /* eliminar márgenes por defecto */
+}
+
+
+
+
 /**********************************************************************************
   
                                 ESTILOS PARA EL BODY
@@ -15,7 +24,7 @@ body
     grid-template-rows: 18vh 63vh 11vh; /* header | main | footer */
     background-color: rgb(255, 255, 255);
     /* fijar el alto total al viewport para que los % funcionen correctamente */
-    height: 90vh; /* subtract top+bottom margins + gap*/
+    height: 92vh; /* subtract top+bottom margins + gap*/
     /* reset de márgenes y espacios para evitar desbordes verticales */
     margin: 2vh;
     padding:0px;
