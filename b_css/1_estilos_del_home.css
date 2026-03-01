@@ -56,7 +56,7 @@ body header
     grid-column: 1/2; /*ocuapra la primera columna, que es la unica que hay*/
     grid-row:1/2; /*ocupa la primera fila, que es la del header*/
     /*background-color: rgb(129, 214, 133);*/
-    background-color: rgb(237, 52, 5);
+    background-color: rgb(129, 214, 133);
     display: grid;
     grid-template-columns: 0.6fr 1.4fr 0.6fr; /* el header se dividirá en tres columnas */
 }
@@ -170,10 +170,10 @@ body footer
 
     header #ContenedorIconoLogin
     {
-        /* icono aún más pequeño para móvil (60% de tamaño previo) */
-        height: 20%;
-        background-size: auto 18%; /* 30% × 0.6 ≈ 18% */
-        margin-right: 0;
+        /* hacer icono más pequeño en celular: 50% del alto del header */
+        height: 30%;
+        background-size: auto 43%;
+        margin-right: 0px;
     }
 
     /* otros ajustes específicos para móvil… */
