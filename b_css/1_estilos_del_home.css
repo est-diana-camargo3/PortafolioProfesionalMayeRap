@@ -170,11 +170,8 @@ body footer
     {
         height: 90vh;          /* restar márgenes + gap */
         overflow: hidden;      /* evitar scroll vertical */
-        grid-template-rows: 16vh 59vh 9vh; /* header | main | footer 
+        grid-template-rows: 16vh 59vh 9vh; /* header | main | footer */
     }
 
     /* otros ajustes específicos para móvil… */
 }
-
-
-
