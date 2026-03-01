@@ -9,12 +9,12 @@ body
     grid-template-rows: 21vh 60vh 11vh; /* header | main | footer */
     background-color: rgb(255, 255, 255);
     /* fijar el alto total al viewport para que los % funcionen correctamente */
-    height: 100vh;
+    height: calc(100vh - 4vh); /* subtract top+bottom margins */
     /* reset de márgenes y espacios para evitar desbordes verticales */
-    margin:2vh;
+    margin: 2vh;
     padding:0px;
     gap:2vh; /* espacio entre filas */
-    /*overflow:hidden; /*evitar scroll vertical*/
+    overflow:hidden; /*evitar scroll vertical*/
 }
 
 /* global box-sizing para evitar que padding y border aumenten dimensiones */
