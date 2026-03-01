@@ -245,6 +245,56 @@ body main {
     transform: scale(0.98);
 }
 
+/* ==============================
+   MODAL COMPRA EXITOSA
+   ============================== */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+}
+
+.modal-contenido {
+    background-color: rgb(158, 232, 161); /* VERDE */
+    /* si lo quieres rosa cambia por:
+       rgb(247, 205, 247)
+    */
+
+    border: 8px solid #5372b7;
+    padding: 4vh 6vh;
+    text-align: center;
+
+    font-size: 3vh;
+    font-weight: bold;
+    color: #2850a7;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+.oculto {
+    display: none;
+}
+
+
+/* centrar botón dentro del modal */
+.btn-descargar {
+    margin: 0 auto;
+    display: block;
+    width: 70%;
+}
+
+
 /**********************************************************************************
   
                    💻💻💻     ESTILOS PARA EL FOOTER     💻💻💻

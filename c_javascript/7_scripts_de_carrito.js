@@ -35,3 +35,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+// ===============================
+// MODAL COMPRA
+// ===============================
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const btnComprar = document.querySelector('.btn-rap');
+    const modal = document.getElementById('modal-compra');
+    const btnDescargar = document.getElementById('btn-descargar-ticket');
+
+    const numeroEntrada = Math.floor(10000 + Math.random() * 90000); // número aleatorio
+
+    if (btnComprar) {
+        btnComprar.addEventListener('click', () => {
+            modal.classList.remove('oculto');
+
+            // actualiza el número en el texto del modal
+            modal.querySelector('strong').textContent = numeroEntrada;
+        });
+    }
+
+    if (btnDescargar) {
+        btnDescargar.addEventListener('click', () => {
+
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            doc.backgroundColor = "#ffcaed"; // fondo claro
+            doc.setFontSize(18);
+            doc.text("🎤 TICKET DE EVENTO 🎤", 20, 30);
+
+            doc.setFontSize(14);
+            doc.text("Compra exitosa", 20, 50);
+            doc.text("Número de entrada:", 20, 70);
+            doc.text(String(numeroEntrada), 20, 85);
+
+            doc.text("Gracias por apoyar el rap independiente 💜", 20, 115);
+
+            doc.save("ticket_evento.pdf");
+
+            // ⏳ pequeña pausa y redirección al home
+            setTimeout(() => {
+                window.location.href = '../index.html';
+            }, 800);
+        });
+
+    }
+
+});
+

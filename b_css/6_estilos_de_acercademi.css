@@ -163,6 +163,47 @@ body main
     background-color:  rgb(247, 205, 247);
 }
 
+/* ==============================
+   ACERCA DE MÍ – LAYOUT
+   ============================== */
+
+#acerca-container {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+    gap: 4vh;
+
+    padding: 4vh;
+}
+
+/* TEXTO */
+#acerca-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vh;
+
+    font-size: 3vh;
+    color: #2850a7;
+}
+
+#acerca-texto h2 {
+    font-size: 5vh;
+    font-weight: bold;
+}
+
+#acerca-texto p {
+    line-height: 1.4;
+}
+
+/* IMAGEN */
+#acerca-imagen {
+    background: url("../f_imagenes/AcercaDeMi.png") center center no-repeat;
+    background-size: contain;
+}
+
 
 
 /**********************************************************************************
@@ -290,6 +331,14 @@ body footer #ContenedorIconoInstagram:hover::after {
     body header #ContenedorTitulo
     {
         font-size: 7vh;
+    }
+    #acerca-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+    #acerca-imagen {
+        height: 40vh;
     }
 }
 
