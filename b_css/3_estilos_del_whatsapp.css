@@ -1,0 +1,92 @@
+/* estilos básicos para la "página" de WhatsApp */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color:  rgb(247, 205, 247);
+}
+
+header {
+    height: 60px;
+    background-color: rgb(129, 214, 133);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    font-size: 1.2rem;
+}
+
+/* estilo específico para el texto del logo */
+header #ContenedorLogo {
+    color: #075e54;           /* verde oscuro */
+    font-size: 1.44rem;       /* 20% más grande que 1.2rem */
+    font-weight: bold;        /* más grueso */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 120px);
+    padding: 8px;
+    overflow-y: auto;
+}
+
+.chat-header {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color:  rgb(247, 205, 247);
+}
+
+.messages {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.message {
+    max-width: 70%;
+    padding: 8px 12px;
+    border-radius: 16px;
+}
+
+.message.received {
+    background: #fff;
+    align-self: flex-start;
+}
+
+.message.sent {
+    background: #dcf8c6;
+    align-self: flex-end;
+}
+
+.input-area {
+    display: flex;
+    gap: 4px;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 18px;
+}
+
+.input-area button {
+    padding: 8px 16px;
+    border: none;
+    background: #075e54;
+    color: #fff;
+    border-radius: 18px;
+}
+
+footer {
+    height: 60px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}

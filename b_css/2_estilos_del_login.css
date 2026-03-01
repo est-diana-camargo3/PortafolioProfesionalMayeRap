@@ -85,42 +85,6 @@ body header #Contenedortitulo
     justify-content:center; /* posiciona el icono a la derecha */
 }
 
-body header #ContenedorIconoLogin
-{
-    grid-column: 3/4; /* columna derecha,osea  la tercera */
-    grid-row:1/2; /* la unica fila del header */
-    position: relative; /* for tooltip positioning */
-    height:80%; /* contenedor ocupa el 70% del alto del header */
-    display:flex;
-    align-self: center; /* centrar el contenedor dentro del header */
-    justify-content:flex-end; /* posiciona el icono a la derecha */
-    cursor: pointer;
-    background: url("../f_imagenes/IconoLogin.png") right center no-repeat;
-    /*background-color: #fff;*/
-    background-size: auto 80%; /* escalar icono para que ocupe 70% del alto */
-    margin-right: 2vh;
-    transition: filter 0.2s;
-}
-
-body header #ContenedorIconoLogin:hover {
-    filter: brightness(1.5);
-}
-
-/* tooltip text shown on hover */
-body header #ContenedorIconoLogin:hover::after {
-    content: "IniciarSesion";
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: rgba(0,0,0,0.7);
-    color: #fff;
-    padding: 2px 6px;
-    font-size: 0.75rem;
-    white-space: nowrap;
-    border-radius: 3px;
-    transform: translateY(4px);
-}
-
 /* same hover/tooltip effect for the logo */
 body header #ContenedorLogo:hover {
     filter: brightness(1.5);
