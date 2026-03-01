@@ -14,7 +14,7 @@ body
     margin:2vh;
     padding:0px;
     gap:2vh; /* espacio entre filas */
-    overflow:hidden; /*evitar scroll vertical*/
+    /*overflow:hidden; /*evitar scroll vertical*/
 }
 
 /* global box-sizing para evitar que padding y border aumenten dimensiones */
