@@ -142,3 +142,33 @@ body footer
     grid-row:3/4;
     background-color: rgb(129, 214, 133);
 }
+
+
+
+
+/**********************************************************************************
+  
+                                ESTILOS PARA celular Diseño responsive 
+
+ **********************************************************************************/
+/* ===== media query para móviles (por ejemplo < 600px de ancho) ===== */
+@media (max-width: 600px) 
+{
+
+    html
+    {
+        height:92vh; /* asegurar que el html ocupe toda la altura del viewport */
+        margin:0; /* eliminar márgenes por defecto */
+    }
+
+    body 
+    {
+        height: 92vh;          /* restar márgenes + gap */
+        /*overflow: hidden;      /* evitar scroll vertical */
+    }
+
+    /* otros ajustes específicos para móvil… */
+}
+
+
+
