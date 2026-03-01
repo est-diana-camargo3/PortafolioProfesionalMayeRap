@@ -1,5 +1,14 @@
-// navegación al hacer clic en el icono de login
+// redirige al home cuando se hace clic en el logo
+
 document.addEventListener('DOMContentLoaded', () => {
+    const logo = document.getElementById('ContenedorLogo');
+    if (logo) {
+        logo.addEventListener('click', () => {
+            // la ruta puede ajustarse según la ubicación real
+            window.location.href = '../index.html';
+        });
+    }
+
     const loginIcon = document.getElementById('ContenedorIconoLogin');
     if (loginIcon) {
         loginIcon.addEventListener('click', () => {
@@ -24,29 +33,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
-    /* 🎵 CANCIONES */
-    const btnCanciones = document.getElementById('btn-canciones');
-    if (btnCanciones) {
-        btnCanciones.addEventListener('click', () => {
-            window.location.href = '../a_html/4_index_de_canciones.html';
-        });
-    }
-
-    /* 🎤 EVENTOS */
-    const btnEventos = document.getElementById('btn-eventos');
-    if (btnEventos) {
-        btnEventos.addEventListener('click', () => {
-            window.location.href = '../a_html/5_index_de_eventos.html';
-        });
-    }
-
-    /* 👑 ACERCA DE MÍ */
-    const btnAcerca = document.getElementById('btn-acerca');
-    if (btnAcerca) {
-        btnAcerca.addEventListener('click', () => {
-            window.location.href = '../a_html/6_index_de_acercademi.html';
-        });
-    }
-
 });
+

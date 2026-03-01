@@ -9,6 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const loginIcon = document.getElementById('ContenedorIconoLogin');
+    if (loginIcon) {
+        loginIcon.addEventListener('click', () => {
+            // cambiar la ruta según el nombre real de la página
+			window.location.href = '../a_html/2_index_del_login.html';
+        });
+    }
+
     const whatsappIcon = document.getElementById('ContenedorIconoWhatsapp');
     if (whatsappIcon) {
         whatsappIcon.addEventListener('click', () => {

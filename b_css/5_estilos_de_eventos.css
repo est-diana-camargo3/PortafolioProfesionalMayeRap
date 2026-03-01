@@ -111,6 +111,8 @@ body header #ContenedorTitulo
 
 
 
+
+
 body header #ContenedorIconoLogin
 {
     grid-column: 3/4; /* columna derecha,osea  la tercera */
@@ -146,7 +148,6 @@ body header #ContenedorIconoLogin:hover::after {
     border-radius: 3px;
     transform: translateY(4px);
 }
-
 
 
 

@@ -104,11 +104,10 @@ body header #ContenedorTitulo
     justify-content:center;  /* centrar horizontalmente */
     height: 90%;             /* ocupar 90% del alto del header */
     color: black;
-    font-size: 10vh;
+    font-size: 8vh;
     font-weight: bold;
     /*content: "LOGIN";*/
 }
-
 
 
 body header #ContenedorIconoLogin
@@ -146,7 +145,6 @@ body header #ContenedorIconoLogin:hover::after {
     border-radius: 3px;
     transform: translateY(4px);
 }
-
 
 
 
