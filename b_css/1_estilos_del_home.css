@@ -1,3 +1,9 @@
+/**********************************************************************************
+  
+                                ESTILOS PARA EL BODY
+
+ **********************************************************************************/
+
 body
 {
     display:grid; /*modelo grilla con filas y columnas*/ 
@@ -24,6 +30,12 @@ body
 }
 
 
+/**********************************************************************************
+  
+                                ESTILOS PARA EL HEADER
+
+ **********************************************************************************/
+
 
 body header
 {
@@ -31,23 +43,67 @@ body header
     grid-row:1/2; /*ocupa la primera fila, que es la del header*/
     background-color: rgb(255, 188, 210);
     display: grid;
-    grid-template-columns: 0.5fr 1.5fr 0.5fr; /* el header se dividirá en tres columnas */
+    grid-template-columns: 0.6fr 1.4fr 0.6fr; /* el header se dividirá en tres columnas */
 }
 
-body header #contenedorlogo 
+body header #ContenedorLogo 
 {
-    grid-column: 2/3; /* centro */
-    grid-row:1/2;
-    /* contenedor ocupa todo el alto del header */
-    /* …keep the full-height container… */
-    height:100%;
+    grid-column: 2/3; /* columna del centro, osea la segunda */
+    grid-row:1/2; /* la unica fila del header */
+    height:100%;/* contenedor ocupa todo el alto del header */
     display:flex;
-    align-items:center;
-    justify-content:center;
-
+    align-items:center; /* centrar contenido verticalmente */
+    justify-content:center; /* centrar contenido horizontalmente */
     background: url("../f_imagenes/Logo.png") center center no-repeat;
     background-size: contain; 
 }
+
+body header #ContenedorIconoLogin
+{
+    grid-column: 3/4; /* columna derecha,osea  la tercera */
+    grid-row:1/2; /* la unica fila del header */
+    position: relative; /* for tooltip positioning */
+    height:80%; /* contenedor ocupa el 70% del alto del header */
+    align-self: center; /* centrar el contenedor dentro de la celda del header */
+    display:flex;
+    align-items:center; /* centrar contenido verticalmente */
+    justify-content:flex-end; /* posiciona el icono a la derecha */
+    padding-right:2vh; /* espacio desde la esquina */
+    cursor: pointer;
+    background: url("../f_imagenes/IconoLogin.png") right center no-repeat;
+    background-size: auto 80%; /* escalar icono para que ocupe 70% del alto */
+    margin-right: 2vh;
+    transition: filter 0.2s;
+}
+
+body header #ContenedorIconoLogin:hover {
+    filter: brightness(1.5);
+}
+
+/* tooltip text shown on hover */
+body header #ContenedorIconoLogin:hover::after {
+    content: "IniciarSesion";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    border-radius: 3px;
+    transform: translateY(4px);
+}
+
+
+
+/**********************************************************************************
+  
+                                ESTILOS PARA EL MAIN
+
+ **********************************************************************************/
+
+
 
 body main
 {
@@ -55,6 +111,16 @@ body main
     grid-row:2/3;
     background-color:  rgb(162, 148, 240);
 }
+
+
+
+/**********************************************************************************
+  
+                                ESTILOS PARA EL FOOTER
+
+ **********************************************************************************/
+
+
 body footer
 {
     grid-column: 1/2;
