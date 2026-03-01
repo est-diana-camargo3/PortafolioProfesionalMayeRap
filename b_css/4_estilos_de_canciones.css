@@ -161,8 +161,30 @@ body header #ContenedorIconoLogin:hover::after {
 body main
 {
     grid-column: 1/2;
-    grid-row:2/3;
-    background-color:  rgb(247, 205, 247);
+    grid-row: 2/3;
+    background-color: rgb(247, 205, 247);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4vh;
+    padding: 4vh;
+}
+
+/* columnas de video */
+.video-col
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* reproductor responsive */
+.video-col iframe
+{
+    width: 100%;
+    height: 100%;
+    min-height: 40vh;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 
@@ -292,6 +314,17 @@ body footer #ContenedorIconoInstagram:hover::after {
     body header #ContenedorTitulo
     {
         font-size: 7vh;
+    }
+    
+    body main
+    {
+        grid-template-columns: 1fr; /* una sola columna */
+        gap: 3vh;
+    }
+
+    .video-col iframe
+    {
+        min-height: 30vh;
     }
 }
 
