@@ -165,7 +165,8 @@ body main #col-left{
 }
 
 /* manchas de pintura de fondo para reforzar estilo orgánico */
-.btn-rap::before {
+.btn-rap::before 
+{
     content: '';
     position: absolute;
     top: -4px; left: -4px; right: -4px; bottom: -4px;
@@ -179,13 +180,13 @@ body main #ContenedorFotoCentral
 {
     grid-column: 2/3; /* columna derecha */
     grid-row:1/2;
-    background-color:  rgb(247, 205, 247);
     display:flex;
     align-items:center;
     justify-content:center;
     background: url("../f_imagenes/FotoCentralHorizontal.png") center center no-repeat;
     background-size: contain;
     margin-right: 10vh;
+    height:100%;
 }
 
 
@@ -320,17 +321,15 @@ body footer #ContenedorIconoInstagram:hover::after {
         transition: filter 0.2s;
     }
 
+    /* imagen central ocupa casi todo el main */
     body main #ContenedorFotoCentral
     {
         grid-column: 2/3; /* columna derecha */
         grid-row:1/2;
-        background-color:  rgb(247, 205, 247);
-        display:flex;
-        align-items:center;
-        justify-content:center;
         background: url("../f_imagenes/FotoCentralVertical.png") center center no-repeat;
-        background-size: contain;
-        margin-right: 10vh;
+        background-size: auto 80%; /* escalar icono para que ocupe 70% del alto */
+        margin: 0px;
+        background-color:  rgb(247, 205, 247);
     }
 
     /* ajustes para columna izquierda en móvil */
@@ -342,11 +341,10 @@ body footer #ContenedorIconoInstagram:hover::after {
         justify-content:center; /* centrar los botones en la columna */
     }
     body main #col-left .btn-rap {
-        width: 70%;         /* ya ajustado antes */
+        width: 80%;         /* más ancho en móvil */
         margin-bottom: 1em;
-        width: 50%;                          /* ocupar la mitad de la columna */
         border: 5px solid #2850a7;          /* azul/verde oscuro como los iconos */
-        font-size: 0.5rem;
+        font-size: 0.8rem;                    /* tamaño de texto legible */
         display:flex;
         align-items:center;
         justify-content:center; /* centrar los botones en la columna */
