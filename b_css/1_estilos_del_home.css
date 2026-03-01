@@ -42,7 +42,6 @@ body header
     grid-column: 1/2; /*ocuapra la primera columna, que es la unica que hay*/
     grid-row:1/2; /*ocupa la primera fila, que es la del header*/
     background-color: rgb(129, 214, 133);
-    /*background-color: rgb(255, 188, 210);*/
     display: grid;
     grid-template-columns: 0.6fr 1.4fr 0.6fr; /* el header se dividirá en tres columnas */
 }
@@ -116,7 +115,7 @@ body main
 {
     grid-column: 1/2;
     grid-row:2/3;
-    background-color:  rgb(162, 148, 240);
+    background-color:  rgb(247, 205, 247);
 }
 
 
@@ -132,5 +131,5 @@ body footer
 {
     grid-column: 1/2;
     grid-row:3/4;
-    background-color: rgb(127, 210, 127);
+    background-color: rgb(129, 214, 133);
 }
