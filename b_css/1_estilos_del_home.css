@@ -6,7 +6,7 @@ body
     /*en este caso la unica columna ocupa toda la proporcion*/
     /* filas adaptables a la altura de la ventana: 25% / 60% / 15% */
     /* filas adaptables a la altura de la ventana */
-    grid-template-rows: 21vh 60vh 11vh; /* header | main | footer */
+    grid-template-rows: 18vh 63vh 11vh; /* header | main | footer */
     background-color: rgb(255, 255, 255);
     /* fijar el alto total al viewport para que los % funcionen correctamente */
     height: 92vh; /* subtract top+bottom margins + gap*/
