@@ -5,27 +5,24 @@ body
     /*repeat(cantidad, tamaño) cuando las filas son iguales*/
     /*en este caso la unica columna ocupa toda la proporcion*/
     /* filas adaptables a la altura de la ventana: 25% / 60% / 15% */
-    grid-template-rows: 20vh 60vh 10vh; /* header | main | footer */
-     /* sin repeat porque las filas no son iguales*/
-    /* en este caso se divide en 3 filas:
-    - la primera ocupa 20% de la altura viewport
-    - la segunda ocupa 60% de la altura viewport
-    - la tercera ocupa 10% de la altura viewport */
+    /* filas adaptables a la altura de la ventana */
+    grid-template-rows: 21vh 60vh 11vh; /* header | main | footer */
     background-color: rgb(255, 255, 255);
-    /*El body No tiene altura predeterminada, su altura depende del contenido, a menos de que lo configuremos*/
-    min-height: 100vh; 
-    /* vh significa Viewport Height (altura del área visible de la pantalla)*/
-    /* El elemento ocupará MINIMO todo el alto de la pantalla del dispositivo, aunque el contenido sea pequeño.*/
-    /* Si tenemos una malla de productos, la pagina (el main que fue el que quedo con proporciones (1fr) 
-    es el que crece...el header y el footer siguen midiendo 70 px cada uno */
-    /*ojo, porque a este 100 se le suman los margenes de los h1, de los p,por eso siempre deben reiniciarse
-    las margenes de h1, p...etc a margin: 0;*/
-    margin:20px;
-    gap:20px; /*espacio entre filas y columnas, en este caso solo entre filas porque solo hay una columna*/ 
-
-    /* evitar barra de desplazamiento y fijar contenido al viewport */
-    overflow: hidden;
+    /* fijar el alto total al viewport para que los % funcionen correctamente */
+    height: 100vh;
+    /* reset de márgenes y espacios para evitar desbordes verticales */
+    margin:2vh;
+    padding:0px;
+    gap:2vh; /* espacio entre filas */
+    overflow:hidden; /*evitar scroll vertical*/
 }
+
+/* global box-sizing para evitar que padding y border aumenten dimensiones */
+*, *::before, *::after 
+{
+    box-sizing: border-box;
+}
+
 
 
 body header
