@@ -5,12 +5,12 @@ body
     /*repeat(cantidad, tamaño) cuando las filas son iguales*/
     /*en este caso la unica columna ocupa toda la proporcion*/
     /* filas adaptables a la altura de la ventana: 25% / 60% / 15% */
-    grid-template-rows: 25vh 60vh 15vh; /* header | main | footer */
+    grid-template-rows: 20vh 60vh 10vh; /* header | main | footer */
      /* sin repeat porque las filas no son iguales*/
     /* en este caso se divide en 3 filas:
-    - la primera ocupa 25% de la altura viewport
+    - la primera ocupa 20% de la altura viewport
     - la segunda ocupa 60% de la altura viewport
-    - la tercera ocupa 15% de la altura viewport */
+    - la tercera ocupa 10% de la altura viewport */
     background-color: rgb(255, 255, 255);
     /*El body No tiene altura predeterminada, su altura depende del contenido, a menos de que lo configuremos*/
     min-height: 100vh; 
