@@ -48,14 +48,20 @@ body header
 
 body header #ContenedorLogo 
 {
-    grid-column: 2/3; /* columna del centro, osea la segunda */
-    grid-row:1/2; /* la unica fila del header */
-    height:100%;/* contenedor ocupa todo el alto del header */
+    grid-column: 2/3; /* columna del centro */
+    grid-row:1/2;
+    height:100%; /* ocupa todo el alto del header */
+    width:100%; /* asegurar que llene la columna */
     display:flex;
-    align-items:center; /* centrar contenido verticalmente */
-    justify-content:center; /* centrar contenido horizontalmente */
+    align-items:center;
+    justify-content:center;
     background: url("../f_imagenes/Logo.png") center center no-repeat;
     background-size: contain; 
+}
+
+/* give the login container a minimum size so icon is always visible */
+body header #ContenedorIconoLogin {
+    min-width: 40px;
 }
 
 body header #ContenedorIconoLogin
