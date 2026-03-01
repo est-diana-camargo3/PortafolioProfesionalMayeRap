@@ -73,24 +73,19 @@ body header #ContenedorLogo
     background-size: contain; 
 }
 
-/* give the login container a minimum size so icon is always visible */
-body header #ContenedorIconoLogin {
-    min-width: 40px;
-}
-
 body header #ContenedorIconoLogin
 {
     grid-column: 3/4; /* columna derecha,osea  la tercera */
     grid-row:1/2; /* la unica fila del header */
     position: relative; /* for tooltip positioning */
     height:80%; /* contenedor ocupa el 70% del alto del header */
-    align-self: center; /* centrar el contenedor dentro de la celda del header */
     display:flex;
-    align-items:center; /* centrar contenido verticalmente */
+    align-self: center; /* centrar el contenedor dentro del header */
     justify-content:flex-end; /* posiciona el icono a la derecha */
-    padding-right:2vh; /* espacio desde la esquina */
+    margin-right:5px; /* espacio desde la esquina */
     cursor: pointer;
     background: url("../f_imagenes/IconoLogin.png") right center no-repeat;
+    /*background-color: #fff;*/
     background-size: auto 80%; /* escalar icono para que ocupe 70% del alto */
     margin-right: 2vh;
     transition: filter 0.2s;
@@ -171,6 +166,14 @@ body footer
         height: 90vh;          /* restar márgenes + gap */
         overflow: hidden;      /* evitar scroll vertical */
         grid-template-rows: 16vh 59vh 9vh; /* header | main | footer */
+    }
+
+    header #ContenedorIconoLogin
+    {
+        /* hacer icono más pequeño en celular: 50% del alto del header */
+        height: 50%;
+        background-size: auto 40%;
+        /* conservar columna y margen (ya globales) */
     }
 
     /* otros ajustes específicos para móvil… */
