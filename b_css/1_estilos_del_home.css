@@ -158,6 +158,7 @@ body main #col-left{
     cursor: pointer;
     clip-path: polygon(5% 0%, 95% 0%, 100% 25%, 80% 40%, 100% 60%, 95% 100%, 5% 100%, 0% 60%, 20% 40%, 0% 25%);
     transition: transform 0.15s;
+    animation: bounce 1s infinite alternate
 }
 
 .btn-rap:hover {
@@ -174,6 +175,26 @@ body main #col-left{
                 radial-gradient(circle at 80% 80%, rgba(255,255,255,0.4) 10%, transparent 11%);
     clip-path: inherit;
     z-index: -1;
+}
+
+body main #col-left .btn-rap:hover {
+        filter: brightness(1.5);
+    }
+
+    
+/* tooltip text shown on hover */
+body main #col-left .btn-rap:hover::after {
+        content: "Instagram";
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: rgba(0,0,0,0.7);
+        color: #fff;
+        padding: 2px 6px;
+        font-size: 0.75rem;
+        white-space: nowrap;
+        border-radius: 3px;
+        transform: translateY(4px);
 }
 
 body main #ContenedorFotoCentral
@@ -348,6 +369,9 @@ body footer #ContenedorIconoInstagram:hover::after {
         display:flex;
         align-items:center;
         justify-content:center; /* centrar los botones en la columna */
+        animation: bounce 1s infinite alternate
+
     }
+
 
 }
