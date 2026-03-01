@@ -82,7 +82,6 @@ body header #ContenedorIconoLogin
     display:flex;
     align-self: center; /* centrar el contenedor dentro del header */
     justify-content:flex-end; /* posiciona el icono a la derecha */
-    margin-right:5px; /* espacio desde la esquina */
     cursor: pointer;
     background: url("../f_imagenes/IconoLogin.png") right center no-repeat;
     /*background-color: #fff;*/
@@ -171,9 +170,9 @@ body footer
     header #ContenedorIconoLogin
     {
         /* hacer icono más pequeño en celular: 50% del alto del header */
-        height: 50%;
-        background-size: auto 40%;
-        /* conservar columna y margen (ya globales) */
+        height: 30%;
+        background-size: auto 43%;
+        margin-right: 2vh;
     }
 
     /* otros ajustes específicos para móvil… */
